@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Barlow+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Inria+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    border: none;
+    outline: none;
+    font-family: "inria sans";
+    font-size: 1.1rem;
+    color: #fff;
+    text-decoration: none;
+}
+body {
+    min-height: 100vh;
+    background-image: url(bg-home.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+main {
+    width: 90%;
+    margin-inline: auto;
+}
+main header {
+    padding-top: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+main header .nav , main header .login{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+main header .nav{
+    width: 50%;
+}
+main header .nav h1 {
+    font-size: 1.9rem;
+}
+main header .nav .active{
+    color: #1456B9;
+}
+main header .login {
+    gap: 30px;
+}
+.sign_up{
+    background-color: #1456B9;
+    padding: 8px 30px;
+    border-radius: 5px;
+}
+main .container{
+    width: 40%;
+    margin-top: 3.6em;
+    padding-inline: 20px;
+}
+main .container .title {
+    font-size: 3em;
+
+}
+main .container .description {
+    font-size: .8em;
+    opacity: .5;
+    font-weight: 100;
+    width: 80%;
+}
+main .container .buttons{
+    margin-top: 1.9em;
+    display: flex;
+}
+main .container .buttons .look{
+    margin-left: 30px;
+    background-color: #fff;
+    padding: 8px 20px;
+    border-radius: 5px;
+    color: #000;
+    border: .5px solid #000;
+}
+

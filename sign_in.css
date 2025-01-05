@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Barlow+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Inria+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    border: none;
+    outline: none;
+    color: #233464;
+}
+html {
+    scroll-behavior: smooth;
+}
+body {
+    font-family: "inria sans";
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+main {
+    padding: 20px;
+    box-shadow: 0 5px 23px rgba(58, 58, 58, 0.75);
+    width: 50%;
+    border-radius: 2px;
+    background:linear-gradient(to bottom,rgba(35,52,100,0.1) 0%,rgba(35,52,100,0.1) 50%,#fff 50%,#fff 100%);
+}
+.form-card{
+    width: 80%;
+    margin-inline: auto;
+}
+
+.logo {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    margin-bottom: 15px;
+}
+
+.form-card > p {
+    opacity: .7;
+    font-size: .9rem;
+    margin-bottom: 5px;
+}
+
+.infos {
+    padding-block: 25px;
+    background-color: #ffffff;
+    align-items: center;
+    display: flex;
+    box-shadow: 0 5px 23px rgba(1, 1, 1, 35%);
+    margin-bottom: 10%;
+}
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form label {
+    font-weight: bold;
+    font-size: .9em;
+    margin-bottom: 5px;
+    margin-left: 45px;
+}
+
+form input {
+    width: 245px;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: .5px solid #d3cece;
+    border-radius: 5px;
+    background-color: #ebe8e8c9;
+    margin-left: 45px;
+}
+
+.button-group {
+    display: flex;
+    justify-content: space-between;
+    margin-left: 45px;
+    width: 250px;
+    margin-bottom: 20px;
+    gap: 10px;
+}
+
+.cancel-btn {
+    background-color: #ccc;
+    color: rgb(53, 53, 53);
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    flex: 1;
+    transition: .3s;
+}
+.login-btn {
+    background-color: #233464;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    flex: 1;
+    margin-right: 3px;
+    transition: .3s;
+}
+.login-btn:hover {
+    background-color: #22325f;
+}
+
+.cancel-btn:hover {
+    background-color: #999;
+}
+
+.p-sign{
+    font-size: .9rem;
+    position: relative;
+    margin-left: 45px;
+}
+.p-sign a{
+    font-weight: bold;
+    /* text-decoration: none; */
+}
+.user{
+    width: 70px;
+    height: 70px;
+    font-size: 50px;
+    margin-left: 60px;
+    margin-bottom: 40%;
+    background-color:#E9EBEF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    
+}
+form span{
+    color: red;
+    margin-left: 45px;
+}
