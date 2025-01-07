@@ -13,12 +13,12 @@
             <div class="nav">
                 <h1>Hospital</h1>
                 <a href="#" class="active">Home</a>
-                <a href="Pharmacie.html">Pharmacie</a>
-                <a href="sign_in.html">Events</a>
+                <a href="Pharmacie.php">Pharmacie</a>
+                <a href="sign_in.php">Events</a>
             </div>
             <div class="login">
-                <a href="sing_in.html">Log In</a>
-                <a class="sign_up" href="sign_up.html">Sign Up</a>
+                <a href="sing_in.php">Log In</a>
+                <a class="sign_up" href="sign_up.php">Sign Up</a>
             </div>
         </header>
         <div class="container">
@@ -32,8 +32,8 @@
                 animi ea possimus fuga. Sapiente, quasi quam. Tempora?
             </p>
             <div class="buttons">
-                <a class="sign_up" href="sign_up.html">Sign Up</a>
-                <a class="look" href="Main.html">Take a look</a>
+                <a class="sign_up" href="sign_up.php">Sign Up</a>
+                <a class="look" href="Main.php">Take a look</a>
             </div>
         </div>
         </main>

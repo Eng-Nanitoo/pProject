@@ -1,3 +1,6 @@
+<?php
+    session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -16,9 +19,9 @@
             <div class="nav">
                 <ul>
                     <li><a href="#">Home</a></li>
-                    <li><a href="#">Features</a></li>
+                    <li><a href="pharmacie.php">Pharmacie</a></li>
                     <li><a href="#events">Events</a></li>
-                    <li><a href="#">Settings</a></li>
+                    <li><a href="settings.php">Settings</a></li>
                 </ul>
             </div>
             <div class="search">

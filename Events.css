@@ -68,6 +68,7 @@ header .search input {
     align-items: center;
 }
 .container .event .details {
+    text-align: center;
     width: 200px;
     height: 100px;
     padding: 10px;

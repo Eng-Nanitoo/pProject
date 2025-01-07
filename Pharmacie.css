@@ -62,10 +62,11 @@ main .container > a{
     text-align: right;
 }
 main .container  .categories{
+    padding-inline: 20px;
     margin-block: 20px;
     display: grid;
-    grid-template-columns: repeat(6,auto);
-    gap: 20px;
+    grid-template-columns: repeat(4,auto);
+    gap: 100px;
 }
 main .container .categories a {
     border-radius: 20px;
@@ -143,4 +144,10 @@ main .products .product .descriptions .adding_p a:hover{
     background-color: #233464;
     color: #fff;
     border: .5px solid #fff;
+}
+.searchR{
+    opacity: .5;
+    font-size: 2em;
+    margin-block: 20px;
+    text-align: center;
 }

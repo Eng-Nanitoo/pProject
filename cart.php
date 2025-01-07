@@ -11,12 +11,12 @@
 <body>
     <main>
         <header>
-            <div class="search">
+            <form class="search">
                 <i class='bx bx-search'></i>
-                <input type="search" placeholder="Medicine and healthcare items">
-            </div>
+                <input type="search" name="sInput" placeholder="Medicine and healthcare items">
+            </form>
             <div class="adding">
-                <a href="/Pharmacie/Pharmacie.html">+ Add An Elemnt</a>
+                <a href="pharmacie.php">+ Add An Elemnt</a>
             </div>
         </header>
         <div class="container">

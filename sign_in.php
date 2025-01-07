@@ -1,19 +1,26 @@
 <?php
     include 'connect.php';
-    $nameError = "";
+    $usernameError = "";
     $passwordError = "";
     if(isset($_POST['submit'])){
-        $username = $_POST['username'];
+        $nameEmail = $_POST['nameEmail'];
         $password = $_POST['password'];
-        if(empty($password) and empty($username)){
-            $nameError = "Name is Required";
+        if(empty($password) and empty($nameEmail)){
+            $nameError = "Name or Email is Required";
             $passwordError = "Password is Required";
         }
         else{
-            $sql = "SELECT * FROM user WHERE username='$username'and password = '$password'";
+            $sql = "SELECT * FROM user WHERE (username='$nameEmail' or email = '$nameEmail') and password = '$password'";
             $result = $conn->query($sql);
             if($result->num_rows > 0){
-                require 'main.php';
+                $sql = "SELECT * FROM user where username = '$nameEmail' or email = '$nameEmail'";
+                $result = $conn->query($sql);
+                $row = $result->fetch_assoc();
+                session_start();
+                $_SESSION['name'] = $row['username'];
+                $_SESSION['password'] = $row['password'];
+                $_SESSION['date'] = $row['dCration'];
+                header("Location: main.php");
             }
             else{
                 $passwordError = "Incorrect Data";
@@ -21,7 +28,6 @@
         }
     }
 ?>
-
 
 <!DOCTYPE html>
 <html lang="en">
@@ -44,8 +50,8 @@
             <div class="infos">
                 <form method="post">
                     <label for="username">Username or Email</label>
-                    <input type="text" name="username" >
-                    <span><?php echo $nameError?></span>
+                    <input type="text" name="nameEmail" >
+                    <span><?php echo $usernameError?></span>
                     <label for="Password">Password</label>
                     <input type="password"  name="password" >
                     <span><?php echo $passwordError?></span>
