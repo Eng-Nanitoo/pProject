@@ -26,7 +26,7 @@ main {
     box-shadow: 0 5px 23px rgba(58, 58, 58, 0.75);
     width: 50%;
     border-radius: 2px;
-    background:linear-gradient(to left top,
+    background:linear-gradient(to top,
     rgba(35,52,100,0.1) 0%,
     rgba(35,52,100,0.1) 50%,
     #fff 50%,
