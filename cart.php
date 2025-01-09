@@ -1,3 +1,18 @@
+<?php
+    include 'connect.php';
+    session_start();
+    $name = $_SESSION['name'];
+    if(isset($_GET['id'])){
+        $id = $_GET['id'];
+        $sql = "insert into user_product (username,productID) values ('$name',$id)";
+        $conn->query($sql);
+    }
+    if(isset($_GET['deleteID'])){
+        $deleteID = $_GET['deleteID'];
+        $sql = "DELETE FROM user_product WHERE username = '$name' and productID = $deleteID";
+        $conn->query($sql);
+    }
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -20,60 +35,35 @@
             </div>
         </header>
         <div class="container">
-            <div class="product">
-                <div class="img">
-                    <img src="/Images/Products/product1.jpg" alt="">
-                </div>
-                <p>
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
-                    Tempore voluptas molestiae velit, nesciunt voluptatum pariatur! Illo, 
-                    ab molestiae, sequi placeat
-                </p>
-                <h2 class="price">
-                    $200.00
-                </h2>
-                <div class="adjust">
-                    <p class="add">+</p>
-                    <p class="quantite">1</p>
-                    <p class="remove">-</p>
-                </div>
-            </div>
-            <div class="product">
-                <div class="img">
-                    <img src="/Images/Products/product2.jfif" alt="">
-                </div>
-                <p>
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
-                    Tempore voluptas molestiae velit, nesciunt voluptatum pariatur! Illo, 
-                    ab molestiae, sequi placeat
-                </p>
-                <h2 class="price">
-                    $200.00
-                </h2>
-                <div class="adjust">
-                    <p class="add">+</p>
-                    <p class="quantite">1</p>
-                    <p class="remove">-</p>
-                </div>
-            </div>
-            <div class="product">
-                <div class="img">
-                    <img src="/Images/Products/product3.jfif" alt="">
-                </div>
-                <p>
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
-                    Tempore voluptas molestiae velit, nesciunt voluptatum pariatur! Illo, 
-                    ab molestiae, sequi placeat
-                </p>
-                <h2 class="price">
-                    $200.00
-                </h2>
-                <div class="adjust">
-                    <p class="add">+</p>
-                    <p class="quantite">1</p>
-                    <p class="remove">-</p>
-                </div>
-            </div>
+        <?php
+                $sql = "SELECT * FROM product JOIN user_product ON product.ID = user_product.productID where user_product.username = '$name'";
+                $result = $conn->query($sql);
+                if($result->num_rows > 0){
+                    while($row = $result->fetch_assoc()){
+                        echo "
+                                <div class='product'>
+                                    <div class='img'>
+                                        <img src='".$row['Path']."' alt=''>
+                                    </div>
+                                    <div class='details'>
+                                        <h2>".$row['Name']."</h2>
+                                    </div>
+                                    <div class='price'>
+                                        <h2 class='price'>
+                                            $".$row['Price']."
+                                        </h2>   
+                                    </div>
+                                    <form method='post' action='cart.php?deleteID=".$row['ID']."'  class='delete'>
+                                        <button type='submit'>Delete <i class='bx bxs-trash' ></i></button>
+                                    </form>
+                                </div>
+                        ";
+                    }
+                }
+                else {
+                    echo "<h1 class='vide'>There is Nothing to See !</h1>";
+                }
+                    ?>
         </div>
     </main>
 </body>

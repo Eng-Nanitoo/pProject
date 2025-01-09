@@ -134,7 +134,10 @@ form input {
     border-radius: 50%;
     
 }
-form span{
-    color: red;
+span {
     margin-left: 45px;
+    color: red;
+    opacity: .8;
+    font-size: .8em;
+    margin-bottom: 10px;
 }

@@ -16,6 +16,35 @@ body {
     min-height: 100vh;
     background-color: #ECEFF8;
 }
+.p_model {
+    background: transparent;
+    background-color: rgba(0,0,0,0.5);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: .3s;
+}
+.model{
+    color: #fff;
+    padding: 50px 90px;
+    background-color: #577BC1;
+    width: 500px;
+    height: 300px;
+    border-radius: 10px;
+    transition: .3s;
+}
+.model h1 {
+    margin-bottom: 15px;
+}
+.model p {
+    z-index: 1;
+    position: relative;
+    text-align: justify;
+    line-height: 1.5em;
+    font-size: .9em;
+    opacity: .9;
+}
 main {
     width: 60%;
     margin-block: 20px;

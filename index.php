@@ -13,11 +13,11 @@
             <div class="nav">
                 <h1>Hospital</h1>
                 <a href="#" class="active">Home</a>
-                <a href="Pharmacie.php">Pharmacie</a>
+                <a href="sign_in.php">Pharmacie</a>
                 <a href="sign_in.php">Events</a>
             </div>
             <div class="login">
-                <a href="sing_in.php">Log In</a>
+                <a href="sign_in.php">Log In</a>
                 <a class="sign_up" href="sign_up.php">Sign Up</a>
             </div>
         </header>
@@ -33,7 +33,6 @@
             </p>
             <div class="buttons">
                 <a class="sign_up" href="sign_up.php">Sign Up</a>
-                <a class="look" href="Main.php">Take a look</a>
             </div>
         </div>
         </main>

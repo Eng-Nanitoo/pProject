@@ -10,6 +10,9 @@
     color: #233464;
     text-decoration: none;
 }
+html {
+    scroll-behavior: smooth;
+}
 main {
     padding-block: 10px;
     width: 98%;
@@ -132,7 +135,7 @@ main .products .product .descriptions .adding_p {
 main .products .product .descriptions .adding_p h2{
     color: #000;
 }
-main .products .product .descriptions .adding_p a{
+main .products .product .descriptions .adding_p button{
     color: #000;
     background-color: #fff;
     border-radius: 30px;
@@ -140,7 +143,7 @@ main .products .product .descriptions .adding_p a{
     border: .5px solid #000;
     transition: .5s;
 }
-main .products .product .descriptions .adding_p a:hover{
+main .products .product .descriptions .adding_p button:hover{
     background-color: #233464;
     color: #fff;
     border: .5px solid #fff;
@@ -150,4 +153,9 @@ main .products .product .descriptions .adding_p a:hover{
     font-size: 2em;
     margin-block: 20px;
     text-align: center;
+}
+.cato {
+    padding: 10px 0;
+    margin-block: 20px;
+    border-bottom: .5px solid #000;
 }

@@ -12,7 +12,20 @@
     <script src="https://kit.fontawesome.com/6934051392.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <main>
+        <?php
+        echo "
+            <div class='p_model' id='p_model'>
+                <div class='model' id='model'>
+                    <h1>Welcome ".$_SESSION['name']."</h1>
+                    <p>
+                        A very warm welcome to you! It is lovely to have you among us! It is our great pleasure to have you on board! A hearty welcome to you! We are glad to welcome you! Your presence is well appreciated, and we are delighted you are here.
+                    </p>
+                </div>
+            </div>
+        ";
+        ?>
+    </div>
+    <main id='main' style='display: none'>
         <header>
             <div class="logo">
             </div>
@@ -104,7 +117,7 @@
             </div>
         </div>
     </main>
-    <footer>
+    <footer style='display:none' id='foot'>
         <div class="f">
             <form action="Home.html">
                 <input type="text" placeholder="Your Name">

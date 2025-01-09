@@ -1,6 +1,7 @@
 <?php
     include 'connect.php';
     session_start();
+    $categories = array('Cardiology','Neurology','Pediatrics','Orthopedics');
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -24,43 +25,46 @@
             <div class="nav">
                 <a class="active" href="#"><i class='bx bxs-badge-dollar'></i> Offers</a>
                 <a href="cart.php"><i class='bx bxs-cart-add' ></i> Cart</a>
-                <a href='sign_in.php'><i class='bx bxs-user' ></i> hogin</a>
+                <a href='sign_in.php'><i class='bx bxs-user' ></i>Login</a>
             </div>
         </header>
         <div class="container">
             <div class="categories">
-                <a href="#" class="active">Cardiology</a>
-                <a href="#">Neurology</a>
-                <a href="#">Pediatrics</a>
-                <a href="#">Orthopedics</a>
+                <a href="#Cardiology" class="active">Cardiology</a>
+                <a href="#Neurology">Neurology</a>
+                <a href="#Pediatrics">Pediatrics</a>
+                <a href="#Orthopedics">Orthopedics</a>
             </div>
-            <div class="products">
             <?php
-                $sql = "SELECT * FROM product";
+            for($i = 0; $i < 4; $i++){
+                $sql = "SELECT * FROM product where Categorie = '". $categories[$i]."'";
                 $result = $conn->query($sql);
                 if($result->num_rows > 0){
+                    echo "<p class='cato' id='".$categories[$i]."'>".$categories[$i]."</p><hr>";
+                    echo  "<div class='products'>";
                     while($row = $result->fetch_assoc()){
-                        echo "
-                            <div class='product'>
-                                <img src=".$row['Path']." name='path'>
-                                <div class='descriptions'>
-                                    <p name='name'>".$row['Name']."</p>
-                                    <h2 name='description'>
-                                    ".$row['Description']."
-                                    </h2>
-                                    <div class='adding_p'>
-                                    <a href='#' type='submit' name='submit'>+ Add to cart</a>
-                                        <h2 name='price'>$".$row['Price']."</h2>
-                                    </div>
+                            echo "
+                                <div class='product'>
+                                    <form method='post' action='cart.php?id=".$row['ID']."' >
+                                        <img src=".$row['Path'].">
+                                        <div class='descriptions'>
+                                            <p>".$row['Name']."</p>
+                                            <h2>
+                                            ".$row['Description']."
+                                            </h2>
+                                            <div class='adding_p'>
+                                                <button type='submit'>+ Add to cart</button>
+                                                <h2>$".$row['Price']."</h2>
+                                            </div>
+                                        </div>
+                                    </form>
                                 </div>
-                            </div>
-                            
                             ";
-                        }
                     }
-
+                        echo "</div>";
+                    }
+            }
                     ?>
-            </div>
         </div>
     </main>
 </body>

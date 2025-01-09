@@ -85,7 +85,7 @@ main .container section a{
     align-items: center;
     gap: 15px;
 }
-main > a {
+main > form button {
     color: #000;
     background-color: #e8e8e8;
     padding: 10px 15px;

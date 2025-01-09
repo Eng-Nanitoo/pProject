@@ -1,5 +1,9 @@
 <?php 
     session_start();
+    if(isset($_POST['logout'])){
+        session_destroy();
+        header('Location: index.php');
+    }
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -36,21 +40,17 @@
                 </a>
             </section>
             <section>
-                <a href="labo.php">
-                    <i class='bx bx-test-tube'></i>
-                    Labo Results
-                </a>
-            </section>
-            <section>
                 <a href="event.php">
                     <i class='bx bxs-calendar-alt'></i>
                     Events
                 </a>
             </section>
         </div>
-        <a href="index.php" class="">
-            <i class='bx bx-log-out' ></i> Log out
-        </a>
+        <form action="" method='post'>
+            <button type='logout' name='logout' class="">
+                <i class='bx bx-log-out'></i> Log out
+            </button>
+        </form>
     </main>
 </body>
 </html>
