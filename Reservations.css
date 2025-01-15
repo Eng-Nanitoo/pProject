@@ -8,6 +8,7 @@
     padding: 0;
     outline: none;
     border: none;
+    text-decoration: none;
 }
 
 body {
@@ -31,8 +32,11 @@ main {
     /* padding: 20px; */
     margin-bottom: 15px;
 }
-.header button{
-
+.header a{
+    color: #000;
+    background-color: #fff;
+    padding: 10px 30px;
+    border-radius: 20px;
 }
 .labels{
     display: grid;
@@ -45,12 +49,18 @@ main {
     background-color: #A8A8A8;
 }
 .container section {
+    margin-block: 20px;
     border-radius: 10px;
     padding: 15px 5px;
     text-align: center;
     display: grid;
     grid-template-columns: repeat(3,auto);
     background-color: #233464;
+}
+.vide {
+    text-align: center;
+    margin-block: 20px;
+    opacity: .6;
 }
 .doctor-area {
     margin-inline: 5px;

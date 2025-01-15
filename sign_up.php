@@ -11,6 +11,8 @@
         if($result->num_rows == 0){
             $sql = "INSERT INTO user(username,email,password,dCration) values('$username','$email','$password','$dCration')";
             $conn->query($sql);
+            // SESSION BEGIN
+
             $sql = "SELECT * FROM user where username = '$username'";
             $result = $conn->query($sql);
             $row = $result->fetch_assoc();
@@ -18,6 +20,7 @@
             $_SESSION['name'] = $row['username'];
             $_SESSION['password'] = $row['password'];
             $_SESSION['date'] = $row['dCration'];
+
             header("Location: main.php");
         }
         else{
@@ -53,7 +56,7 @@
             <h3>Personnal Informations</h3>
             <p>Entrer Your Information In The Field Bllow</p>
             <div class="infos">
-                <form method="post" action="">
+                <form method="post">
                     <label for="username">Username</label><input type="text" name="username" required>
                     <span><?php echo $nameError?></span>
                     <label for="email">Email</label> <input type="email" name="email" required>

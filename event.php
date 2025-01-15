@@ -2,6 +2,12 @@
     include 'connect.php';
     session_start();
     $name = $_SESSION['name'];
+    if(isset($_GET['id'])){
+        $eventID = $_GET['id'];
+        $sql = "insert into user_event(username,eventID) values('$name',$eventID)";
+        $conn->query($sql);
+        header('Location: settings.php');
+    }
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -42,8 +48,8 @@
                                         ".$row["description"]."
                                     </p>
                                 </div>
-                                <form method='post' class='joiner'>
-                                    <button class='join' type='submit' name='join'>
+                                <form method='post' action='event.php?id=".$row['id']."' class='joiner'>
+                                    <button class='join' type='submit'>
                                         + Join
                                     </button>
                                 </form>

@@ -45,6 +45,12 @@
                     Events
                 </a>
             </section>
+            <section>
+                <a href="labo.php">
+                    <i class='bx bx-test-tube'></i>
+                    Labo Results
+                </a>
+            </section>
         </div>
         <form action="" method='post'>
             <button type='logout' name='logout' class="">

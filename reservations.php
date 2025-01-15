@@ -15,7 +15,7 @@
   <main>
       <div class="header">
         <h2>Reservations</h2>
-        <button class="adding">+ Add One</button>
+        <a class="adding" href='reserv.php'>+ Add One</a>
       </div>
         <div class="container">
           <div class="labels">
@@ -43,7 +43,10 @@
                             
                             ";
                         }
-                    }
+                }
+                else {
+                  echo "<h1 class='vide'>There is No Reservation!</h1>";
+              }
 
           ?>
         </div>

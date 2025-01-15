@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Barlow+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Inria+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
+
+* {
+  font-family: "inria sans";
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  outline: none;
+  border: none;
+  transition: .5s;
+}
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  
+}
+main {
+  width: 50%;
+  margin-inline: auto;
+  padding: 60px;
+  background: linear-gradient(to left top,#233464 0%,#233464 50%,#fff 50%,#fff 100%);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+.page {
+  background-color: #fff;
+  padding: 20px 30px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+
+.Reservation {
+  margin-block: 25px;
+  text-align: center;
+  color: #233464;
+  font-family:  Georgia, Times, 'Times New Roman', serif;
+  font-size: 2.5em;
+  font-weight: bold;
+}
+  
+.form-group {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+label {
+  font-size: 20px;
+  font-weight: bolder;
+  color: #24346D;
+}
+
+input {
+  width: 60%;
+  height: 30px;
+  padding: 5px 10px;
+  border: 1px solid #ccc;
+  font-size: 17px;
+  background-color: #f5f5f5;
+  border-bottom: .5px solid #5A5A5A;
+  margin-right: 100px;
+}
+  
+  
+.form-group-button {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.form-group-button button {
+  box-shadow: 1px 2px 5px 1px rgba(0,0,0,0.2);
+  padding: 10px 40px;
+  border-radius: 20px;
+}
+.confirm {
+  color: #fff;
+  background-color: #24346D;
+  font-weight: bold;
+  cursor: pointer; 
+}
+.confirm:hover {
+  background-color: #2e46a0;
+}
+.cancel-button {
+  background-color: #fff;
+  color: #24346D;
+  border: none;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer; 
+}
+  
+  .cancel-button:hover {
+    background-color: #ebebeb;
+  }
+.error {
+    position: relative;
+    text-align: left;
+    font-size: .9rem;
+    color: red;
+    display: block;
+    margin-top: -20px;
+}
