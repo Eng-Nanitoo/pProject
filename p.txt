@@ -1,0 +1,61 @@
+Projet: Decomposition de Jordan
+La Decomposition de Jordan consiste a reconstruire une matrice sous la forme :
+A = PJP¬-1
+Ce Decomposition sert a simplifier l’analyse d’une matrice Carree A ∈ Mn(R), une Matrice A est dite diagonalisable si elle possede une base de vecteurs propres ce n’est que obtenir des valeurs propres distincts ou l’ordre de multiplicite d’une λ ne depasse pas 1 (different deux a deux) ; d’où la polynome caracteristique x(A)  s’ecrit sous la forme suivant :
+x_A (x) = (x-λ_1 )(x-λ_2 )⋯⋯⋯(x-λ_n )
+Avec :
+s_P (A)={λ_1,λ_2⋅⋯λ_n }
+Dans la cas ou la matrice A n’est pas diagonalisable, la matrice peut etre trigonalisable.
+P est la matrice de passage former du vecteurs Propres ou vecteurs caracteristiques .
+	Dans Cas du Vecteurs Propres (Valeurs Propres Distincts):
+On determine pour tout  λ∈sp(A) la Base Eλ :
+
+E_(λ_1 )=ker⁡(A-λ_1 I_n )
+.
+.
+.
+E_(λ_n )=ker⁡(A-λ_n I_n )
+
+	Dans cas du Vecteur Generalises (Valeurs Propres simulaires):
+Pour tout λ_n de multiplicite m on Generalise m-1 vecteurs :
+	Pour m = 1  on calcule vecteur propre associe:
+Vn = ker⁡(A-λ_n I_n )
+	Pour m > 1 on calcul les vecteurs generalise :
+Vn-1 = ker⁡(A-λ_n I_n )vn
+D’où les colones de la Matrice du Passage P sont n’est que des vecteurs propres ou vecteurs caracteristiques :
+P = [v_1,v_2,v_3……v_n ]
+
+
+
+
+
+J est la matrice jordan former des blocs du jordan associe a chaque λ S’ecrit sous la forme suivant :
+J(λ,m)  =  (■(λ&1⋯&0@⋮&⋱1&⋮@0&…..&λ))
+la Matrice J est une matrice tringulaire superieure dont la diagonale former du bloc du jordan de dimension m×m ou m est l’ordre du multiplicite d’une valeur propre λ_n.
+
+	JordanDecomposition(A)
+Cette sert a decomposer la matrice A en la forme precedente PJP-1 les detaillees pour decomposer A est :
+	On calcule la polynome caracteristiques de la Matrice si une valeur propre λ_n a comme ordre de multilicite m > 1 :
+On calcule une vecteur propre associe et on generalise m-1 vecteur associe .
+	Si m < 1 :
+On calcule la vecteur propre associe.
+Puis on reconstuire la matrice P avec les vecteurs propres obtenues sachant represente une colonne de la matrice P.
+En fin on en deduire J par la relation :
+J = P-1AP
+	CheckJordanDecomposition(A,P,J)
+Cette fonction verifie si la decomposition d’une Matrice A est vraie ce n’est qu’elle calcul l’inverse du P puis faire la Produit PJP-1 puis le compare avec A.
+	EigenvaluesJordan (J)
+Dans cette methode nous voulons calculer les valeurs propres d’une Matrice Jordan J on sait que cette matrice est triangulaire suprieure d’où ces valeurs propres sont n’est que ca diagonale.
+
+
+
+	GeneralizedEigenvecters (A)
+Pour calculer les vecteurs generalises d’une Matrice  A nous concernons deux choses les valeurs propres associes et leur ordre du multiplicite.
+Pour chaque valeur propre λ_n et leur ordre du multiplicite m on calcul n vecteurs caracteristiques ou n ≤ m :
+ker⁡〖((A-λ_n I_n )〗)m
+	JordanDynamics(A)
+En cette point nous voudrons utiliser cette Decomposition de Jordan pour resoudre une système dynamic s’ecrit sous la forme :
+dx/dt=Ax
+Le but d’utiliser la decomposition est de simplifier la calcul est atteint la solution cherche :
+	Reduire l’ecriture :
+dx/dt=Ax   => x'(t)=Ax(t)
